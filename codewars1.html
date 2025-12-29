@@ -62,5 +62,11 @@ function sumArray(array) {
 
   return sorted.reduce((sum, num) => sum + num, 0);
 }
+function isVow(arr) {
+  return arr.map(num => {
+    const char = String.fromCharCode(num);
+    return "aeiou".includes(char) ? char : num;
+  });
+}
 </script>
 
