@@ -50,5 +50,17 @@ function lovefunc(flower1, flower2){
 function removeEveryOther(arr) {
   return arr.filter((_, index) => index % 2 === 0);
 }
+
+function sumArray(array) {
+  if (!Array.isArray(array) || array.length <= 2) {
+    return 0;
+  }
+
+  let sorted = array.slice().sort((a, b) => a - b);
+  sorted.pop();      // usuń największy
+  sorted.shift();    // usuń najmniejszy
+
+  return sorted.reduce((sum, num) => sum + num, 0);
+}
 </script>
 
