@@ -90,5 +90,14 @@ function stringToArray(string) {
 function hero(bullets, dragons){
   return bullets >= dragons * 2
 }
+function drawStairs(n) {
+  let result = [];
+
+  for (let i = 0; i < n; i++) {
+    result.push(" ".repeat(i) + "I");
+  }
+
+  return result.join("\n");
+}
 </script>
 
