@@ -5,99 +5,129 @@ function numberToAscii(num) {
 }
 </script> -->
 <script>
-function removeExclamationMarks(s) {
-  return s.replace(/!/g, '');
-}
+  function removeExclamationMarks(s) {
+    return s.replace(/!/g, "");
+  }
 
-//another kata
-function pillars(numPill, dist, width) {
-  if (numPill <= 1) return 0;
-  return (numPill - 1) * dist * 100 + (numPill - 2) * width;
-}
+  //another kata
+  function pillars(numPill, dist, width) {
+    if (numPill <= 1) return 0;
+    return (numPill - 1) * dist * 100 + (numPill - 2) * width;
+  }
 
-function remove(s) {
-  return s.replace(/!+$/, '');
-}
+  function remove(s) {
+    return s.replace(/!+$/, "");
+  }
 
-const stringToNumber = function(str){
-  return Number(str);
-}
-
-function getDrinkByProfession(param) {
-  const drinks = {
-    "jabroni": "Patron Tequila",
-    "school counselor": "Anything with Alcohol",
-    "programmer": "Hipster Craft Beer",
-    "bike gang member": "Moonshine",
-    "politician": "Your tax dollars",
-    "rapper": "Cristal"
+  const stringToNumber = function (str) {
+    return Number(str);
   };
 
-  return drinks[param.toLowerCase()] || "Beer";
-}
+  function getDrinkByProfession(param) {
+    const drinks = {
+      jabroni: "Patron Tequila",
+      "school counselor": "Anything with Alcohol",
+      programmer: "Hipster Craft Beer",
+      "bike gang member": "Moonshine",
+      politician: "Your tax dollars",
+      rapper: "Cristal",
+    };
 
-function lovefunc(flower1, flower2){
-  // moment of truth
- let truth = flower1 + flower2;
-  
-  if (truth%2 == 0) {
-    return false;
-  } else {
-    return true;
-  }
-}
-
-function removeEveryOther(arr) {
-  return arr.filter((_, index) => index % 2 === 0);
-}
-
-function sumArray(array) {
-  if (!Array.isArray(array) || array.length <= 2) {
-    return 0;
+    return drinks[param.toLowerCase()] || "Beer";
   }
 
-  let sorted = array.slice().sort((a, b) => a - b);
-  sorted.pop();      // usuń największy
-  sorted.shift();    // usuń najmniejszy
+  function lovefunc(flower1, flower2) {
+    // moment of truth
+    let truth = flower1 + flower2;
 
-  return sorted.reduce((sum, num) => sum + num, 0);
-}
-function isVow(arr) {
-  return arr.map(num => {
-    const char = String.fromCharCode(num);
-    return "aeiou".includes(char) ? char : num;
-  });
-}
-
-function feast(beast, dish) {
-  return beast[0] === dish[0] &&
-         beast[beast.length - 1] === dish[dish.length - 1];
-}
-
-function evenOrOdd(number) {
-  return number % 2 ? "Odd" : "Even";
-}
-const sayHello = name => `Hello, ${name}`;
-
-function main (verb, noun) {
-  return verb + noun;
-}
-
-function stringToArray(string) {
-  return string.split(" ");
-}
-
-function hero(bullets, dragons){
-  return bullets >= dragons * 2
-}
-function drawStairs(n) {
-  let result = [];
-
-  for (let i = 0; i < n; i++) {
-    result.push(" ".repeat(i) + "I");
+    if (truth % 2 == 0) {
+      return false;
+    } else {
+      return true;
+    }
   }
 
-  return result.join("\n");
+  function removeEveryOther(arr) {
+    return arr.filter((_, index) => index % 2 === 0);
+  }
+
+  function sumArray(array) {
+    if (!Array.isArray(array) || array.length <= 2) {
+      return 0;
+    }
+
+    let sorted = array.slice().sort((a, b) => a - b);
+    sorted.pop(); // usuń największy
+    sorted.shift(); // usuń najmniejszy
+
+    return sorted.reduce((sum, num) => sum + num, 0);
+  }
+  function isVow(arr) {
+    return arr.map((num) => {
+      const char = String.fromCharCode(num);
+      return "aeiou".includes(char) ? char : num;
+    });
+  }
+
+  function feast(beast, dish) {
+    return (
+      beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
+    );
+  }
+
+  function evenOrOdd(number) {
+    return number % 2 ? "Odd" : "Even";
+  }
+  const sayHello = (name) => `Hello, ${name}`;
+
+  function main(verb, noun) {
+    return verb + noun;
+  }
+
+  function stringToArray(string) {
+    return string.split(" ");
+  }
+
+  function hero(bullets, dragons) {
+    return bullets >= dragons * 2;
+  }
+  function drawStairs(n) {
+    let result = [];
+
+    for (let i = 0; i < n; i++) {
+      result.push(" ".repeat(i) + "I");
+    }
+
+    return result.join("\n");
+  }
+
+  function flip(d, a) {
+    return d === "R"
+      ? a.slice().sort((x, y) => x - y)
+      : a.slice().sort((x, y) => y - x);
+  }
+
+  const peopleWithAgeDrink = (age) =>
+    age < 14
+      ? "drink toddy"
+      : age < 18
+      ? "drink coke"
+      : age < 21
+      ? "drink beer"
+      : "drink whisky";
+
+  function getSize(width, height, depth) {
+    const area = 2 * (width * height + width * depth + height * depth);
+    const volume = width * height * depth;
+
+    return [area, volume];
+  }
+
+  function fixTheMeerkat(arr) {
+  return [arr[2], arr[1], arr[0]];
+}
+
+function fixTheMeerkat(arr) {
+  return arr.reverse();
 }
 </script>
-
