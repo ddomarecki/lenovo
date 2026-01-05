@@ -153,4 +153,16 @@ function numberToAscii(num) {
   function basicOp(o, a, b) {
     return o === "+" ? a + b : o === "-" ? a - b : o === "*" ? a * b : a / b;
   }
+
+  function invert(array) {
+  return array.map(n => -n);
+}
+
+function countBy(x, n) {
+  let result = [];
+  for (let i = 1; i <= n; i++) {
+    result.push(x * i);
+  }
+  return result;
+}
 </script>
