@@ -139,14 +139,18 @@ function numberToAscii(num) {
     return arr;
   };
 
-  function boolToWord( bool ){
-  return bool ? 'Yes':'No';
-}
-function monkeyCount(n) {
-  let result = [];
-  for (let i = 1; i <= n; i++) {
-    result.push(i);
+  function boolToWord(bool) {
+    return bool ? "Yes" : "No";
   }
-  return result;
-}
+  function monkeyCount(n) {
+    let result = [];
+    for (let i = 1; i <= n; i++) {
+      result.push(i);
+    }
+    return result;
+  }
+
+  function basicOp(o, a, b) {
+    return o === "+" ? a + b : o === "-" ? a - b : o === "*" ? a * b : a / b;
+  }
 </script>
