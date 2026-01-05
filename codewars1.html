@@ -155,14 +155,24 @@ function numberToAscii(num) {
   }
 
   function invert(array) {
-  return array.map(n => -n);
+    return array.map((n) => -n);
+  }
+
+  function countBy(x, n) {
+    let result = [];
+    for (let i = 1; i <= n; i++) {
+      result.push(x * i);
+    }
+    return result;
+  }
+
+  function getAverage(marks) {
+    return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
+  }
+
+  function twoDecimalPlaces(n) {
+  return Math.round(n * 100) / 100;
 }
 
-function countBy(x, n) {
-  let result = [];
-  for (let i = 1; i <= n; i++) {
-    result.push(x * i);
-  }
-  return result;
-}
+const twoDecimalPlaces = n =>  Number(n.toFixed(2))
 </script>
