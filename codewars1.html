@@ -171,8 +171,66 @@ function numberToAscii(num) {
   }
 
   function twoDecimalPlaces(n) {
-  return Math.round(n * 100) / 100;
-}
+    return Math.round(n * 100) / 100;
+  }
 
-const twoDecimalPlaces = n =>  Number(n.toFixed(2))
+  const twoDecimalPlaces = (n) => Number(n.toFixed(2));
+
+  function boolToWord(bool) {
+    return bool ? "Yes" : "No";
+  }
+
+  function sum(numbers) {
+    return numbers.reduce((acc, curr) => acc + curr, 0);
+  }
+
+  function bmi(weight, height) {
+    var result = weight / Math.pow(height, 2);
+
+    if (result <= 18.5) {
+      return "Underweight";
+    } else if (result <= 25) {
+      return "Normal";
+    } else if (result <= 30) {
+      return "Overweight";
+    } else {
+      return "Obese";
+    }
+  }
+
+  function fakeBin(x) {
+    return x
+      .split("")
+      .map((digit) => (digit < 5 ? "0" : "1"))
+      .join("");
+  }
+
+  function fakeBin(str) {
+    var newStr = "";
+    for (var i = 0; i < str.length; i++) {
+      if (Number(str[i]) >= 5) {
+        newStr += "1";
+      } else {
+        newStr += "0";
+      }
+    }
+    return newStr;
+  }
+
+  function maps(x) {
+    return x.map((value) => value * 2);
+  }
+
+  function maps(x) {
+    //return x.map(el => el * 2);
+    let arr = [];
+    for (let i = 0; i < x.length; i++) {
+      arr.push(x[i] * 2);
+    }
+    return arr;
+  }
+
+  function RemoveExclamationMarks(s) {
+    return s.replace(/!/g, "");
+  }
 </script>
