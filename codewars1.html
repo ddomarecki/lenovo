@@ -254,7 +254,45 @@ function numberToAscii(num) {
     return bool ? "Yes" : "No";
   }
 
-  function smash (words) {
-   return words.join(" ");
-};
+  function smash(words) {
+    return words.join(" ");
+  }
+
+  function getAge(inputString) {
+    // return the girl's correct age as an integer. Happy coding :)
+    return parseInt(inputString[0]);
+  }
+
+  function getAverage(marks){
+  return Math.floor(marks.reduce((partialSum, a) => partialSum + a, 0) / marks.length)
+}
+
+function sumArray(array) {
+  if (!Array.isArray(array) || array.length <= 2) {
+    return 0;
+  }
+
+  const sorted = array.slice().sort((a, b) => a - b);
+  return sorted.slice(1, -1).reduce((sum, n) => sum + n, 0);
+}
+
+sumArray = a => a ? a.sort((x, y) => x - y).slice(1, -1).reduce((s, e) => s + e, 0) : 0
+
+
+function basicOp(operation, value1, value2)
+{
+  // Code
+  if( operation == "+") {
+    return value1 + value2
+  }
+  if( operation == "-") {
+    return value1 - value2
+  }
+  if( operation == "*") {
+    return value1 * value2
+  }
+  if( operation == "/") {
+    return value1 / value2
+  }
+}
 </script>
