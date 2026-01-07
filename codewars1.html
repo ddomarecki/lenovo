@@ -326,5 +326,11 @@ var stringToNumber = function(str){
 function bonusTime(salary, bonus) {
   return "£" + (bonus ? salary * 10 : salary);
 }
+function bonusTime(salary, bonus) {
+return (bonus) ? "£" + salary * 10 : "£" + salary;
+}
 
+function isIsogram(str){
+	return new Set(str.toUpperCase()).size == str.length;
+}
 </script>
