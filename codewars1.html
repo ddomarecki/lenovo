@@ -316,9 +316,15 @@ function numberToAscii(num) {
   }
 
   sumArray = a => a ? a.sort((x, y) => x - y).slice(1, -1).reduce((s, e) => s + e, 0) : 0
-</script>
+
 
 var stringToNumber = function(str){
   // put your code here
   return Number(str);
 }
+
+function bonusTime(salary, bonus) {
+  return "£" + (bonus ? salary * 10 : salary);
+}
+
+</script>
