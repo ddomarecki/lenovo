@@ -315,22 +315,101 @@ function numberToAscii(num) {
     }
   }
 
-  sumArray = a => a ? a.sort((x, y) => x - y).slice(1, -1).reduce((s, e) => s + e, 0) : 0
+  sumArray = (a) =>
+    a
+      ? a
+          .sort((x, y) => x - y)
+          .slice(1, -1)
+          .reduce((s, e) => s + e, 0)
+      : 0;
 
+  var stringToNumber = function (str) {
+    // put your code here
+    return Number(str);
+  };
 
-var stringToNumber = function(str){
-  // put your code here
-  return Number(str);
-}
+  function bonusTime(salary, bonus) {
+    return "£" + (bonus ? salary * 10 : salary);
+  }
+  function bonusTime(salary, bonus) {
+    return bonus ? "£" + salary * 10 : "£" + salary;
+  }
 
-function bonusTime(salary, bonus) {
-  return "£" + (bonus ? salary * 10 : salary);
-}
-function bonusTime(salary, bonus) {
-return (bonus) ? "£" + salary * 10 : "£" + salary;
-}
+  function isIsogram(str) {
+    return new Set(str.toUpperCase()).size == str.length;
+  }
 
-function isIsogram(str){
+  function grow(arr) {
+    return arr.reduce((a, b) => a * b, 1);
+  }
+
+  function squareSum(numbers) {
+    return numbers.reduce((sum, num) => sum + num * num, 0);
+  }
+
+  const squareSum = (numbers) =>
+    numbers.reduce((sum, num) => sum + num ** 2, 0);
+
+  function testit(a, b) {
+    return a.concat(b).sort((x, y) => x - y);
+  }
+
+  //kata 7
+  function testit(a, b) {
+    a = [...new Set(a)];
+    b = [...new Set(b)];
+    return a.concat(b).sort(function (c, d) {
+      return c - d;
+    });
+  }
+
+  function testit(a, b) {
+    return [...new Set(a), ...new Set(b)].sort((a, b) => a - b);
+  }
+  //kata 8
+  const makeUpperCase = (str) => str.toUpperCase();
+
+  function sumMix(x) {
+    return x.reduce((sum, val) => sum + Number(val), 0);
+  }
+  function invert(array) {
+    return array.map((a) => a * -1);
+  }
+
+  function evenOrOdd(number) {
+    if (number % 2 === 0) {
+      return "Even";
+    } else {
+      return "Odd";
+    }
+  }
+
+  const reverseSeq = (n) => {
+    let result = [];
+    for (let i = n; i >= 1; i--) {
+      result.push(i);
+    }
+    return result;
+  };
+
+  function isIsogram(str) {
+    // Convert the string to lowercase to ignore case
+    const lowerStr = str.toLowerCase();
+
+    // Create a Set from the string letters
+    const lettersSet = new Set(lowerStr);
+
+    // If the Set size equals the string length, no duplicates exist
+    return lettersSet.size === lowerStr.length;
+  }
+
+  function isIsogram(str) {
+    const lowerStr = str.toLowerCase();
+    const lettersSet = new Set(lowerStr);
+    return lettersSet.size === lowerStr.length;
+  }
+
+  function isIsogram(str){
 	return new Set(str.toUpperCase()).size == str.length;
 }
 </script>
