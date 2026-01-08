@@ -444,18 +444,28 @@ function numberToAscii(num) {
   }
 
   function century(year) {
-  return Math.ceil(year / 100);
-}
-
-function countBy(x, n) {
-  let z = [];
-  for (let i = 1; i <= n; i++) {
-    z.push(x * i);
+    return Math.ceil(year / 100);
   }
-  return z;
-}
 
-function lovefunc(flower1, flower2) {
-  return flower1 % 2 !== flower2 % 2;
-}
+  function countBy(x, n) {
+    let z = [];
+    for (let i = 1; i <= n; i++) {
+      z.push(x * i);
+    }
+    return z;
+  }
+
+  function lovefunc(flower1, flower2) {
+    return flower1 % 2 !== flower2 % 2;
+  }
+
+  var countSheep = function (num) {
+    let result = "";
+
+    for (let i = 1; i <= num; i++) {
+      result += `${i} sheep...`;
+    }
+
+    return result;
+  };
 </script>
