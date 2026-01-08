@@ -16,7 +16,6 @@ function numberToAscii(num) {
     return s.replace(/!/g, "");
   }
 
-  
   //another kata
   function pillars(numPill, dist, width) {
     if (numPill <= 1) return 0;
@@ -438,4 +437,25 @@ function numberToAscii(num) {
       .map((word) => word[0].toUpperCase())
       .join(".");
   }
+
+  function abbrevName(name) {
+    let arr = name.toUpperCase().split(" ");
+    return `${arr[0][0]}.${arr[1][0]}`;
+  }
+
+  function century(year) {
+  return Math.ceil(year / 100);
+}
+
+function countBy(x, n) {
+  let z = [];
+  for (let i = 1; i <= n; i++) {
+    z.push(x * i);
+  }
+  return z;
+}
+
+function lovefunc(flower1, flower2) {
+  return flower1 % 2 !== flower2 % 2;
+}
 </script>
