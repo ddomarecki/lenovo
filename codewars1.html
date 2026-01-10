@@ -469,47 +469,50 @@ function numberToAscii(num) {
     return result;
   };
 
-  function getGrade (s1, s2, s3) {
-  avg = (s1+s2+s3)/3;
-  if (avg < 60)  return "F";
+  function getGrade(s1, s2, s3) {
+    avg = (s1 + s2 + s3) / 3;
+    if (avg < 60) return "F";
     else if (avg < 70) return "D";
     else if (avg < 80) return "C";
     else if (avg < 90) return "B";
     else return "A";
-}
-
-function hero(bullets, dragons) {
-  return bullets >= dragons * 2;
-}
-
-function countPositivesSumNegatives(input) {
-  if (!input || input.length === 0) return [];
-
-  let countPositives = 0;
-  let sumNegatives = 0;
-
-  for (let num of input) {
-    if (num > 0) {
-      countPositives++;
-    } else if (num < 0) {
-      sumNegatives += num;
-    }
   }
 
-  return [countPositives, sumNegatives];
-}
+  function hero(bullets, dragons) {
+    return bullets >= dragons * 2;
+  }
 
-function multiply(a, b){
-  return a * b;
-}
+  function countPositivesSumNegatives(input) {
+    if (!input || input.length === 0) return [];
 
-function boolToWord( bool ){
-  return bool ? "Yes" : "No";
-}
+    let countPositives = 0;
+    let sumNegatives = 0;
 
-function getAverage(marks){
- let sum = marks.reduce((a, b) => a + b)
-return Math.floor(sum / marks.length)
-}
+    for (let num of input) {
+      if (num > 0) {
+        countPositives++;
+      } else if (num < 0) {
+        sumNegatives += num;
+      }
+    }
 
+    return [countPositives, sumNegatives];
+  }
+
+  function multiply(a, b) {
+    return a * b;
+  }
+
+  function boolToWord(bool) {
+    return bool ? "Yes" : "No";
+  }
+
+  function getAverage(marks) {
+    let sum = marks.reduce((a, b) => a + b);
+    return Math.floor(sum / marks.length);
+  }
+
+  function bonusTime(salary, bonus) {
+    return bonus ? `£${salary * 10}` : `£${salary}`;
+  }
 </script>
